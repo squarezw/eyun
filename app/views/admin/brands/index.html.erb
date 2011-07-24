@@ -1,0 +1,44 @@
+<h1>品牌列表</h1>
+<div class="products">
+<% @brands.each do |brand| %>
+	<li>
+		<div class="picture">
+			<%= image_tag(brand.picture, :width => '150px')%>
+			<p align='center'>
+				<%= link_to '显示', admin_brand_path(brand) %> |
+				<%= link_to '编辑', edit_admin_brand_path(brand) %> |
+				<%= link_to '删除', admin_brand_path(brand), :confirm => 'Are you sure?', :method => :delete %><br>
+			</p>			
+		</div>
+		<div class="info">
+			<h2><%= brand.name_cn%></h2>
+			<p></p>
+			<div style="border-top:1px solid #F9E4E9">
+				<span>英文：</span>
+				<%= brand.name_en%>
+				<br>
+				<span>创始人：</span>
+				<%= brand.founder%>
+				<br>
+				<span>发源地：</span>
+				<%= brand.origin%>
+				<br>
+				<span>创建时间：</span>
+				<%= brand.create_at%>
+				<br>
+				<span>官方网站：</span>
+				<%= brand.website%>
+			</div>			
+			<div class="intro">
+				<%= brand.intro%>
+			</div>
+
+		</div>
+	</li>
+<span class="clearfix"></span>
+<% end %>
+</div>
+<br />
+<span class="clearfix"></span>
+<%#= link_to 'New Product', new_admin_product_path %>
+<%=will_paginate @brands%>

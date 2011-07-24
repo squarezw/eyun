@@ -1,0 +1,35 @@
+body,
+h1,h2,h3,h4,h5,h6,
+p,ul,ol,dl,dd,
+form,fieldset,legend,textarea,input,button,
+blockquote,pre{
+	margin:0;
+	padding:0;
+}
+.clearfix{
+	clear:both;
+}
+
+.products{
+	
+}
+.products h2{
+	color:#BD5564;
+}
+.products li{
+	width: 500px;
+	height: 320px;
+	float:left;
+	border: 2px solid #F0CDD1;
+	padding: 5px;
+	overflow: hidden;
+}
+.products .picture{
+	float: left;
+	padding: 10px 15px;
+	width: 150px;
+}
+.products .info{
+	float: left;
+ 	width: 316px;
+}

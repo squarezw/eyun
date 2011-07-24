@@ -1,0 +1,19 @@
+<%#= form_for(@product_category, :url => admin_product_categories_path) do |f| %>
+  <% if @product_category.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@product_category.errors.count, "error") %> prohibited this admin_product_category from being saved:</h2>
+
+      <ul>
+      <% @product_category.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+	<li>上级分类id:<%= form.text_field :parent_id%></li>
+	<li>名称:<%= form.text_field :name%></li>
+    <%= form.submit %>
+  </div>
+<%# end %>

@@ -1,0 +1,25 @@
+
+  <% if @product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@product.errors.count, "error") %> prohibited this admin_product_category from being saved:</h2>
+
+      <ul>
+      <% @product.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+	<li>名称:<%= form.text_field :name%></li>
+	<li>分类id:<%= form.text_field :product_category_id%></li>
+	<li>价格:<%= form.text_field :price%></li>
+	<li>产品规格:<%= form.text_field :stand%></li>
+	<li>上市时间:<%= form.text_field :released_date%></li>
+	<li>产品系列:<%= form.text_field :series%></li>
+	<li>产品功效:<%= form.text_field :effect%></li>
+	<li>产品介绍:<%= form.text_area :intro%></li>
+	<li>产品标签:<%= form.text_field :tags%></li>
+    <%= form.submit %>
+  </div>

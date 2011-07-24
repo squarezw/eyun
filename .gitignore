@@ -1,0 +1,5 @@
+.DS_Store
+tmp/**/*
+public/images/upload/
+public/upload/brands/
+script/*.rb
