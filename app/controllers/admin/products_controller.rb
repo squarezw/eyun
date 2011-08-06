@@ -1,6 +1,10 @@
 class Admin::ProductsController < ApplicationController
   def index
-    @products = Product.paginate(:per_page => 20, :page => params[:page])
+    unless params[:tag].blank?
+      conditions = ["tags like ?", "%#{params[:tag]}%"]
+    end
+    
+    @products = Product.paginate(:per_page => 20, :page => params[:page], :conditions => conditions)
   end
   
   def edit
@@ -14,5 +18,29 @@ class Admin::ProductsController < ApplicationController
     else
       render :action => "edit"
     end
+  end
+  
+  def set_recommend
+    tag = params[:tag]
+
+    @product = Product.find(params[:id])
+    if @product.set_recommend
+      redirect_to(admin_products_path(:tag => tag, :page => params[:page]))
+    else
+      redirect_to(admin_products_path,:notice => '推荐失败!')
+    end
+    
+  end
+  
+  def cancel_recommend
+    tag = params[:tag]
+
+    @product = Product.find(params[:id])
+    if @product.cancel_recommend
+      redirect_to(admin_products_path(:tag => tag, :page => params[:page]))
+    else
+      redirect_to(admin_products_path,:notice => '取消推荐失败!')
+    end
+    
   end
 end

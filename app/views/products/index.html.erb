@@ -1,0 +1,50 @@
+<h1>产品列表</h1>
+<div class="products">
+<% @products.each do |product| %>
+	<li>
+		<div class="picture">
+			<%= image_tag(product.picture)%>
+			<p align='center'>
+				<%= link_to '显示', admin_product_path(product) %> |
+				<%= link_to '编辑', edit_admin_product_path(product) %> |
+				<%= link_to '删除', admin_product_path(product), :confirm => 'Are you sure?', :method => :delete %><br>
+			</p>			
+		</div>
+		<div class="info">
+			<h2><%= product.name%></h2>
+			<p></p>
+			<div style="border-top:1px solid #F9E4E9">
+				<span>参考价格：</span>
+				<%= product.price%>
+				<br>
+				<span>产品规格：</span>
+				<%= product.stand%>
+				<br>
+				<span>上市时间：</span>
+				<%= product.released_date%>
+				<br>
+				<span>产品分类：</span>
+				<%= product.product_category.name%>
+				<br>
+				<span>产品功效：</span>
+				<%= product.effect%>
+			</div>
+			相关标签:
+			<dl class="tags">
+				<dt>
+					<%= product.tags%>
+				</dt>
+			</dl>			
+			<div class="intro">
+				<%= product.intro%>
+			</div>
+
+		</div>
+	</li>
+<span class="clearfix"></span>
+<% end %>
+</div>
+<br />
+<span class="clearfix"></span>
+<%#= link_to 'New Product', new_admin_product_path %>
+<%=will_paginate @products%>
