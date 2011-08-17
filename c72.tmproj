@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>app/controllers/admin/products_controller.rb</string>
+	<string>app/views/admin/products/index.html.erb</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -40,14 +40,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>4</integer>
+				<integer>73</integer>
 				<key>line</key>
-				<integer>5</integer>
+				<integer>27</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
+			<integer>12</integer>
 		</dict>
 		<key>app/controllers/application_controller.rb</key>
 		<dict>
@@ -85,6 +85,20 @@
 				<integer>3</integer>
 				<key>line</key>
 				<integer>4</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>app/models/product.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>13</integer>
+				<key>line</key>
+				<integer>10</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -214,14 +228,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>25</integer>
+				<integer>9</integer>
 				<key>line</key>
-				<integer>7</integer>
+				<integer>40</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>0</integer>
+			<integer>13</integer>
 		</dict>
 		<key>app/views/products/index.html.erb</key>
 		<dict>
@@ -272,14 +286,30 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>11</integer>
+				<integer>13</integer>
 				<key>line</key>
-				<integer>7</integer>
+				<integer>5</integer>
 			</dict>
+			<key>columnSelection</key>
+			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
+			<key>selectFrom</key>
+			<dict>
+				<key>column</key>
+				<integer>10</integer>
+				<key>line</key>
+				<integer>5</integer>
+			</dict>
+			<key>selectTo</key>
+			<dict>
+				<key>column</key>
+				<integer>26</integer>
+				<key>line</key>
+				<integer>5</integer>
+			</dict>
 		</dict>
 		<key>db/migrate/20110716173958_create_product_categories.rb</key>
 		<dict>
@@ -300,30 +330,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>19</integer>
+				<integer>5</integer>
 				<key>line</key>
-				<integer>11</integer>
+				<integer>20</integer>
 			</dict>
-			<key>columnSelection</key>
-			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
-			<key>selectFrom</key>
-			<dict>
-				<key>column</key>
-				<integer>16</integer>
-				<key>line</key>
-				<integer>11</integer>
-			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>20</integer>
-				<key>line</key>
-				<integer>11</integer>
-			</dict>
 		</dict>
 		<key>db/migrate/20110717142030_create_brands.rb</key>
 		<dict>
@@ -333,6 +347,20 @@
 				<integer>18</integer>
 				<key>line</key>
 				<integer>13</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>db/migrate/20110806051308_add_recommend_to_products.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>15</integer>
+				<key>line</key>
+				<integer>5</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -410,14 +438,16 @@
 		<string>app/views/admin/product_categories/index.html.erb</string>
 		<string>app/views/products/index.html.erb</string>
 		<string>app/controllers/admin/products_controller.rb</string>
+		<string>app/models/product.rb</string>
 		<string>app/controllers/admin/product_categories_controller.rb</string>
 		<string>db/migrate/20110716173958_create_product_categories.rb</string>
 		<string>db/migrate/20110717021919_create_products.rb</string>
+		<string>db/migrate/20110806051308_add_recommend_to_products.rb</string>
 		<string>db/migrate/20110717142030_create_brands.rb</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{504, 7}, {1029, 743}}</string>
+	<string>{{212, 20}, {1029, 743}}</string>
 </dict>
 </plist>

@@ -33,3 +33,6 @@ blockquote,pre{
 	float: left;
  	width: 316px;
 }
+.red {
+	color:red;
+}
